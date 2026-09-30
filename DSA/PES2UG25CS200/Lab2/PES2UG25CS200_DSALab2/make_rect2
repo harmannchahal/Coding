@@ -1,0 +1,8 @@
+program2: client.o rect.o list.o
+	gcc client.o rect.o list.o -o program2
+client.o: client.c list.h
+	gcc -Wall -c client.c
+rect.o: rect.c rect.h
+	gcc -Wall -c rect.c
+list.o: list.c list.h
+	gcc -Wall -c list.c

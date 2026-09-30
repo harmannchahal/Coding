@@ -1,0 +1,6 @@
+program: client_rect.o rect.o
+	gcc client_rect.o rect.o -o program
+client_rect.o: client_rect.c rect.h
+	gcc -Wall -c client_rect.c
+rect.o: rect.c rect.h
+	gcc -Wall -c rect.c
